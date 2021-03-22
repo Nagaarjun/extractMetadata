@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.ts",
+  "main": "./local.ts",
   "scripts": {
     "start:build": "tsc -W",
-    "start:run": "nodemon build/index.js",
+    "start:run": "nodemon build/local.js",
     "start": "concurrently npm:start:*"
   },
   "keywords": [],
@@ -15,19 +15,21 @@
     "@types/body-parser": "^1.17.1",
     "@types/cookie-session": "^2.0.38",
     "@types/express": "^4.17.2",
+    "aws-serverless-express": "^3.4.0",
     "body-parser": "^1.19.0",
     "concurrently": "^5.1.0",
     "cookie-session": "^1.4.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "html-metadata-parser": "^1.0.3",
     "install": "^0.13.0",
     "mongodb": "^3.5.4",
     "node-cron": "^2.0.3",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "serverless-http": "^2.7.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.6",
-    "@types/node-cron": "^2.0.3",
-    "html-metadata-parser": "^1.0.3"
+    "@types/node-cron": "^2.0.3"
   }
 }

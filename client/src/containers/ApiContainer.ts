@@ -2,11 +2,11 @@ import axios from "axios";
 export type ApiContainerState = {
   url: string;
 };
-
+const envurl = "https://snaazmnpbf.execute-api.ap-south-1.amazonaws.com/dev/getMetaData";
 export const fetchMetaData = async (url: string) => {
   console.log(url);
   try {
-    const resp = await axios.post("http://localhost:3000/getMetaData", {
+    const resp = await axios.post(envurl, {
        url
     });
     console.log(resp);

@@ -26,14 +26,9 @@ var body_parser_1 = __importDefault(require("body-parser"));
 var cors_1 = __importDefault(require("cors"));
 var express_1 = __importDefault(require("express"));
 var data = __importStar(require("./routes/metaDataController"));
-var serverless_http_1 = __importDefault(require("serverless-http"));
 var app = express_1.default();
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use(body_parser_1.default.json());
 app.use(cors_1.default());
 app.use("/getMetaData", data.getMetaData);
-app.listen(3000, function () {
-    console.log("Listening on port 3000");
-});
-module.exports.handler = serverless_http_1.default(app);
 exports.default = app;
