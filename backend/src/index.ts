@@ -11,3 +11,4 @@ app.use(cors());
 
 app.use("/getMetaData", data.getMetaData);
 module.exports.handler = sls(app);
+export default app;

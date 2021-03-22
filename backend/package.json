@@ -5,7 +5,7 @@
   "main": "./local.ts",
   "scripts": {
     "start:build": "tsc -W",
-    "start:run": "nodemon build/local.js",
+    "start:local:run": "nodemon build/local.js",
     "start": "concurrently npm:start:*"
   },
   "keywords": [],
